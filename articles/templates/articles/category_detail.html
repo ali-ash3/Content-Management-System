@@ -1,0 +1,27 @@
+{% comment %} <h1>{{ category.name }}</h1>
+<ul>
+{% for for category in categories.name.all %}
+    <li>{{ category.name }}</li>
+{% endfor %}
+</ul>
+{% endcomment %}
+
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Category Page: {{ category.name }}</title>
+</head>
+<body>
+    <h1>Category: {{ category.name }}</h1>
+    <ul>
+        {% for article in articles %}
+            <li>
+                <h2><a href="/articles/{{ article.id }}/">{{ article.title }}</a></h2>
+                
+                
+                <p>Publication Date: {{ article.publication_date }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
